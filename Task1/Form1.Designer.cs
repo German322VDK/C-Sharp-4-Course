@@ -87,7 +87,7 @@ namespace Task1
             // labelXYMouse
             // 
             this.labelXYMouse.AutoSize = true;
-            this.labelXYMouse.Location = new System.Drawing.Point(64, 221);
+            this.labelXYMouse.Location = new System.Drawing.Point(64, 228);
             this.labelXYMouse.Name = "labelXYMouse";
             this.labelXYMouse.Size = new System.Drawing.Size(38, 15);
             this.labelXYMouse.TabIndex = 2;
