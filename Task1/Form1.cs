@@ -17,5 +17,14 @@ namespace Task1
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Задание 1", "Подсказка");
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
