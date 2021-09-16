@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Task2
@@ -16,7 +12,7 @@ namespace Task2
         private const string formText = "Итерационное вычесление сумм";
 
         private const string button1Text = "Вычислить";
-        private const string button2Text = "Прочитать из файла";
+        private const string button2Text = "Запись в файл";
         private const string button3Text = "Выход";
 
         private const string label1Text = "Введите значение аргумента \nв градусах";
@@ -29,6 +25,8 @@ namespace Task2
 
         public Form1()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
             InitializeComponent();
 
             Text = formText;
@@ -58,11 +56,23 @@ namespace Task2
 
             ComputeCosRowObject(firstBord, endBord);
 
-            WriteInfo();
+            WriteInfoToForm();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(objs is null)
+            {
+                MessageBox.Show("Выполните вычисления", "Ошибка");
+                return;
+            }
+
+            using (var writer = new StreamWriter("1.txt", true))
+            {
+                WriteInfoToFile(writer);
+            }
+
+            MessageBox.Show("Запись в файл выполнилась успешно", "Успех");
 
         }
 
@@ -101,7 +111,7 @@ namespace Task2
             return args;
         } 
 
-        private void WriteInfo()
+        private void WriteInfoToForm()
         {
             listBox1.Items.Add("Аргумент   Точность  Функция    Итерация");
 
@@ -118,5 +128,21 @@ namespace Task2
             }
         }
 
+        private void WriteInfoToFile(StreamWriter sw)
+        {
+            sw.WriteLine("Аргумент   Точность  Функция    Итерация");
+
+            foreach (var obj in objs)
+            {
+
+                for (int i = 0; i < obj.FunValue.Length; i++)
+                {
+                    sw.WriteLine($"{obj.Argument}\t  {obj.Accuracy[i]}\t  " +
+                        $"{obj.FunValue[i]}\t\t  {obj.Iteration[i]}\t");
+                }
+
+                sw.WriteLine();
+            }
+        }
     }
 }
