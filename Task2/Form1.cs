@@ -43,11 +43,13 @@ namespace Task2
         private void button1_Click(object sender, EventArgs e)
         {
 
+            listBox1.Items.Clear();
+
             var firstResult = double.TryParse(textBox1.Text, out var firstBord);
 
             var endResult = double.TryParse(textBox2.Text, out var endBord);
 
-            if( ! (firstResult && endResult))
+            if (!(firstResult && endResult))
             {
                 MessageBox.Show("Введены некорректные данные(", "Ошибка");
 
@@ -67,7 +69,7 @@ namespace Task2
                 return;
             }
 
-            using (var writer = new StreamWriter("1.txt", true))
+            using (var writer = new StreamWriter("1.txt"))
             {
                 WriteInfoToFile(writer);
             }
@@ -120,7 +122,7 @@ namespace Task2
                 
                 for (int i = 0; i < obj.FunValue.Length; i++)
                 {
-                    listBox1.Items.Add($"{obj.Argument}\t  {obj.Accuracy[i]}\t  " +
+                    listBox1.Items.Add($"{obj.Argument}\t  {obj.Accuracy[i].ToString("0.000000")}\t  " +
                         $"{obj.FunValue[i]}\t\t  {obj.Iteration[i]}\t");
                 }
 
@@ -137,8 +139,8 @@ namespace Task2
 
                 for (int i = 0; i < obj.FunValue.Length; i++)
                 {
-                    sw.WriteLine($"{obj.Argument}\t  {obj.Accuracy[i]}\t  " +
-                        $"{obj.FunValue[i]}\t\t  {obj.Iteration[i]}\t");
+                    sw.WriteLine($"{obj.Argument} {obj.Accuracy[i].ToString("0.000000")} " +
+                        $"{obj.FunValue[i]} {obj.Iteration[i]}");
                 }
 
                 sw.WriteLine();
