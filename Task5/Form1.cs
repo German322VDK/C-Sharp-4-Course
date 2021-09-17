@@ -168,7 +168,9 @@ namespace Task5
         private void FormClear()
         {
             dataGridView1.Rows.Clear();
+
             listBox1.Items.Clear();
+
             chart1.Series[0].Points.Clear();
 
             chart2.Series.Clear();
