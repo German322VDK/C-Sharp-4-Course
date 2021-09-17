@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Task_4
@@ -22,6 +15,8 @@ namespace Task_4
         private const string label6Text = "";
         private const string label7Text = "";
         private const string label8Text = "Введите число элементов для сортировки";
+
+        private const string label567 = "Время:";
 
         private const string checkBoxText = "Показывать данные";
 
@@ -301,35 +296,44 @@ namespace Task_4
 
         private void WriteForm()
         {
-            for (int i = 0; i < _randArray.Length; i++)
+            if (checkBox1.Checked)
             {
-                listBox1.Items.Add($"{_randArray[i]}");
+                for (int i = 0; i < _randArray.Length; i++)
+                {
+                    listBox1.Items.Add($"{_randArray[i]}");
+                }
+
+                for (int i = 0; i < _bobbleArray.Length; i++)
+                {
+                    listBox2.Items.Add($"{_bobbleArray[i]}");
+                }
+
+                for (int i = 0; i < _selectArray.Length; i++)
+                {
+                    listBox3.Items.Add($"{_selectArray[i]}");
+                }
+
+                for (int i = 0; i < _quickArray.Length; i++)
+                {
+                    listBox4.Items.Add($"{_quickArray[i]}");
+                }
             }
 
-            for (int i = 0; i < _bobbleArray.Length; i++)
-            {
-                listBox2.Items.Add($"{_bobbleArray[i]}");
-            }
-
-            for (int i = 0; i < _selectArray.Length; i++)
-            {
-                listBox3.Items.Add($"{_selectArray[i]}");
-            }
-
-            for (int i = 0; i < _quickArray.Length; i++)
-            {
-                listBox4.Items.Add($"{_quickArray[i]}");
-            }
+            label5.Text = $"{label567}{_bobbleData[_bobbleData.Length - 1].TimeSec}с";
 
             for (int i = 0; i < _bobbleData.Length; i++)
             {
                 listBox5.Items.Add($"{_bobbleData[i].Count}-{_bobbleData[i].TimeSec}c");
             }
 
+            label6.Text = $"{label567}{_selectData[_selectData.Length - 1].TimeSec}с";
+
             for (int i = 0; i < _selectData.Length; i++)
             {
                 listBox6.Items.Add($"{_selectData[i].Count}-{_selectData[i].TimeSec}c");
             }
+
+            label7.Text = $"{label567}{_quickData[_quickData.Length - 1].TimeSec}с";
 
             for (int i = 0; i < _quickData.Length; i++)
             {
