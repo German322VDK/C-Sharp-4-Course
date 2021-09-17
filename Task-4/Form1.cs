@@ -294,6 +294,17 @@ namespace Task_4
             return pivot;
         }
 
+        private bool IsSorted(int[] array)
+        {
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                if (array[i] > array[i + 1])
+                    return false;
+            }
+
+            return true;
+        }
+
         private void WriteForm()
         {
             if (checkBox1.Checked)
@@ -319,21 +330,57 @@ namespace Task_4
                 }
             }
 
-            label5.Text = $"{label567}{_bobbleData[_bobbleData.Length - 1].TimeSec}с";
+            string isBobleSort;
+
+            string isSelectSort;
+
+            string isQuickSort;
+
+            if (IsSorted(_bobbleArray))
+            {
+                isBobleSort = "Успешно";
+            }
+
+            else
+            {
+                isBobleSort = "Неудачно";
+            }
+
+            if (IsSorted(_bobbleArray))
+            {
+                isSelectSort = "Успешно";
+            }
+
+            else
+            {
+                isSelectSort = "Неудачно";
+            }
+
+            if (IsSorted(_bobbleArray))
+            {
+                isQuickSort = "Успешно";
+            }
+
+            else
+            {
+                isQuickSort = "Неудачно";
+            }
+
+            label5.Text = $"{isBobleSort} {label567}{_bobbleData[_bobbleData.Length - 1].TimeSec}с";
 
             for (int i = 0; i < _bobbleData.Length; i++)
             {
                 listBox5.Items.Add($"{_bobbleData[i].Count}-{_bobbleData[i].TimeSec}c");
             }
 
-            label6.Text = $"{label567}{_selectData[_selectData.Length - 1].TimeSec}с";
+            label6.Text = $"{isSelectSort} {label567}{_selectData[_selectData.Length - 1].TimeSec}с";
 
             for (int i = 0; i < _selectData.Length; i++)
             {
                 listBox6.Items.Add($"{_selectData[i].Count}-{_selectData[i].TimeSec}c");
             }
 
-            label7.Text = $"{label567}{_quickData[_quickData.Length - 1].TimeSec}с";
+            label7.Text = $"{isQuickSort} {label567}{_quickData[_quickData.Length - 1].TimeSec}с";
 
             for (int i = 0; i < _quickData.Length; i++)
             {
@@ -350,6 +397,10 @@ namespace Task_4
             listBox5.Items.Clear();
             listBox6.Items.Clear();
             listBox7.Items.Clear();
+
+            label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
         }
     }
 
