@@ -54,7 +54,7 @@ namespace Task_7_1
 
             label4.Text += SplitFileText(_fileText);
 
-            _texts = Placement(_fileText, m);
+            //_texts = Placement(_fileText, m);
         }
 
         private void button2_Click(object sender, EventArgs e) =>
