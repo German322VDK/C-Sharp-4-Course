@@ -47,9 +47,10 @@ namespace Task_10_1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 457);
+            this.button1.Location = new System.Drawing.Point(35, 609);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(86, 31);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ввод";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,94 +59,99 @@ namespace Task_10_1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 25);
+            this.label1.Location = new System.Drawing.Point(35, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(31, 163);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(35, 217);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(54, 169);
+            this.listBox1.Size = new System.Drawing.Size(61, 224);
             this.listBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 53);
+            this.label2.Location = new System.Drawing.Point(35, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 131);
+            this.label3.Location = new System.Drawing.Point(35, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 82);
+            this.textBox1.Location = new System.Drawing.Point(35, 109);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 23);
+            this.textBox1.Size = new System.Drawing.Size(133, 27);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(217, 82);
+            this.textBox2.Location = new System.Drawing.Point(248, 109);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 23);
+            this.textBox2.Size = new System.Drawing.Size(133, 27);
             this.textBox2.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 25);
+            this.label4.Location = new System.Drawing.Point(248, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 15);
+            this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "label4";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(217, 53);
+            this.label5.Location = new System.Drawing.Point(248, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "label5";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(217, 163);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(248, 217);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(54, 169);
+            this.listBox2.Size = new System.Drawing.Size(61, 224);
             this.listBox2.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(217, 131);
+            this.label6.Location = new System.Drawing.Point(248, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
+            this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "label6";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(217, 457);
+            this.button2.Location = new System.Drawing.Point(248, 609);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 31);
             this.button2.TabIndex = 11;
             this.button2.Text = "Выйти";
             this.button2.UseVisualStyleBackColor = true;
@@ -154,25 +160,26 @@ namespace Task_10_1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 391);
+            this.label7.Location = new System.Drawing.Point(35, 521);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 15);
+            this.label7.Size = new System.Drawing.Size(50, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "label7";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(217, 383);
+            this.textBox3.Location = new System.Drawing.Point(226, 521);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(117, 23);
+            this.textBox3.Size = new System.Drawing.Size(155, 27);
             this.textBox3.TabIndex = 13;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 525);
+            this.ClientSize = new System.Drawing.Size(453, 700);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
@@ -188,6 +195,7 @@ namespace Task_10_1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Task-10";
             this.ResumeLayout(false);
